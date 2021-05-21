@@ -18,6 +18,7 @@ function App() {
 
   useEffect(()=>{
     getRecords()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   const handleSubmit = async (event) =>{
@@ -43,14 +44,6 @@ function App() {
     let res = await axios.get(url,axiosConfig)
     setParticipants(res.data.records)
     console.log(res.data.records)
-  }
-
-  const showMessage =()=> {
-    return(
-      <div>
-          <p>{name} is {mode} in the 1st Annual Whitesides Memorial Day Race!!</p>
-      </div>
-    )
   }
 
   return (
@@ -153,7 +146,7 @@ function App() {
         
         <div className="route">
           <h2>Route</h2>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1OIl8cYbFJz1bpZUM_HXsQN56am-sVhJw" width="100%" height="350" ></iframe>
+          <iframe title="map of the race" src="https://www.google.com/maps/d/embed?mid=1OIl8cYbFJz1bpZUM_HXsQN56am-sVhJw" width="100%" height="350" ></iframe>
         </div>
       </div> 
       
