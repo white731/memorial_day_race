@@ -57,7 +57,7 @@ function App() {
 
 
 
-      <div>
+      <div className="title">
         <h1>1st Annual Whitesides Memorial Day 10K</h1>
         <h2>May 31st, 2021</h2>
         <h2>Start Time: 11:00 AM</h2>
@@ -120,9 +120,9 @@ function App() {
 
         <div className="list-of-participants">
           <h2>Participant List!</h2>
-          {participants.sort((a,b)=>b.fields.ID - a.fields.ID).map(x => {
+          {participants.sort((a,b)=>a.fields.ID - b.fields.ID).map(x => {
             return (
-            <p key={x.fields.ID}>{x.fields.Name} is {x.fields.Mode}</p>
+            <p key={x.fields.ID}>{x.fields.ID} - {x.fields.Name} is {x.fields.Mode}</p>
         )
         })}
         </div>
