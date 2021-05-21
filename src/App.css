@@ -1,3 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
@@ -13,10 +20,6 @@ h2 {
 img{
   display:flex;
   margin:auto;
-}
-
-iframe {
-  margin-bottom: 100px;
 }
 
 button{
@@ -47,6 +50,8 @@ button:hover{
 
 .sign-up-div{
   margin-bottom: 20px;
+  max-width: 450px;
+  padding:10px;
 
 }
 
@@ -74,4 +79,51 @@ button:hover{
 
 .sign-up-button p{
   text-align: center;
+}
+
+.questions{
+
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  margin:auto;
+  padding:10px;
+  font-size: 9pt;
+  text-align: center;
+}
+
+.list-of-participants{
+  max-width: 450px;
+  padding:10px;
+}
+
+@media screen and (min-width: 425px) {
+  .route-info h2 {
+    text-align: left;
+  }
+
+  .list-of-participants h2 {
+    text-align: left;
+  }
+
+  .form-and-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+
+  .route-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .race-desc img {
+    float: right;
+    padding:20px;
+  }
 }
